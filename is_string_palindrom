@@ -1,0 +1,39 @@
+def clear_function(string):
+
+    new_string = ""
+    string = string.lower()
+
+    for ch in string:
+        if ch <= chr(255) and ch >=chr(65):
+            new_string += ch
+
+    return new_string
+
+def reverse(string):
+
+    n = len(string)-1
+    new_string = ""
+
+    while n >= 0:
+        new_string += string[n]
+
+        n -=1
+    return clear_function(new_string)
+        
+
+def palindrom(string):
+
+    
+
+    if clear_function(string) == reverse(string):
+        return "The string is palindrom"
+    else:
+        return "The string is not palindrom"
+
+    
+
+
+
+items = input("Enter the text: ")
+
+print(palindrom(items))
